@@ -88,7 +88,7 @@
         android:layout_marginStart="44dp"
         android:layout_marginBottom="335dp"
         android:ems="10"
-        android:inputType="date"
+        android:inputType="none"
         android:text="Set start date"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -101,9 +101,23 @@
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="335dp"
         android:ems="10"
-        android:inputType="date"
+        android:inputType="none"
         android:text="Set end date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/createGoalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="172dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="114dp"
+        android:text="Create Goal!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editStartDate" />
 
 </android.support.constraint.ConstraintLayout>

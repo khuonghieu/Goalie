@@ -19,8 +19,6 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String ENDDAY = "endDay";
     public static final String ENDMONTH = "endMonth";
     public static final String ENDYEAR = "endYear";
-
-
     public static final int VERSION = 2;
 
     private final String createDB = "create table if not exists " + TABLE_NAME + " ( "
