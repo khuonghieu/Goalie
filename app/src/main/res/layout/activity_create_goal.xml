@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="84dp"
-        android:layout_height="34dp"
+        android:layout_width="104dp"
+        android:layout_height="49dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="59dp"
@@ -17,25 +17,27 @@
         android:text="Goal Name"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toStartOf="@+id/editGoalName"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="81dp"
-        android:layout_height="34dp"
+        android:layout_width="104dp"
+        android:layout_height="52dp"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="62dp"
         android:text="Category"
         app:layout_constraintEnd_toStartOf="@+id/categorySpinner"
+        app:layout_constraintHorizontal_bias="0.944"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="83dp"
-        android:layout_height="36dp"
+        android:layout_width="103dp"
+        android:layout_height="65dp"
         android:layout_marginStart="45dp"
         android:layout_marginTop="41dp"
         android:layout_marginEnd="59dp"
@@ -43,13 +45,15 @@
         android:text="Description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editDescription"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editGoalName"
-        android:layout_width="176dp"
-        android:layout_height="34dp"
+        android:layout_width="173dp"
+        android:layout_height="49dp"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
@@ -59,10 +63,10 @@
 
     <Spinner
         android:id="@+id/categorySpinner"
-        android:layout_width="176dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="41dp"
-        android:layout_marginEnd="48dp"
+        android:layout_width="175dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="44dp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editGoalName" />
@@ -70,23 +74,24 @@
     <EditText
         android:id="@+id/editDescription"
         android:layout_width="174dp"
-        android:layout_height="74dp"
+        android:layout_height="97dp"
         android:layout_marginTop="46dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="48dp"
         android:layout_marginBottom="451dp"
         android:ems="10"
         android:inputType="text"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categorySpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/categorySpinner"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editStartDate"
         android:layout_width="122dp"
         android:layout_height="38dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="335dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="296dp"
         android:ems="10"
         android:inputType="none"
         android:text="Set start date"
@@ -98,26 +103,28 @@
         android:id="@+id/editEndDate"
         android:layout_width="139dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="335dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="296dp"
         android:ems="10"
         android:inputType="none"
         android:text="Set end date"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/editStartDate" />
 
     <Button
         android:id="@+id/createGoalButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
-        android:layout_marginTop="172dp"
         android:layout_marginEnd="162dp"
-        android:layout_marginBottom="114dp"
+        android:layout_marginBottom="140dp"
         android:text="Create Goal!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editStartDate" />
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
