@@ -13,9 +13,13 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String TITLE = "title";
     public static final String CATEGORY = "type";
     public static final String DESCRIPTION = "description";
-    public static final String DAY = "day";
-    public static final String MONTH = "month";
-    public static final String YEAR = "year";
+    public static final String STARTDAY = "startDay";
+    public static final String STARTMONTH = "startMonth";
+    public static final String STARTYEAR = "startYear";
+    public static final String ENDDAY = "endDay";
+    public static final String ENDMONTH = "endMonth";
+    public static final String ENDYEAR = "endYear";
+
 
     public static final int VERSION = 2;
 
@@ -24,9 +28,12 @@ public class DBHelper extends SQLiteOpenHelper {
             + TITLE + " text, "
             + CATEGORY + " text, "
             + DESCRIPTION + " text, "
-            + DAY + " int, "
-            + MONTH + " int, "
-            + YEAR + " int)";
+            + STARTDAY + " integer, "
+            + STARTMONTH + " integer, "
+            + STARTYEAR + " integer, "
+            + ENDDAY + " integer, "
+            + ENDMONTH + " integer, "
+            + ENDYEAR + " integer)";
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, VERSION);
