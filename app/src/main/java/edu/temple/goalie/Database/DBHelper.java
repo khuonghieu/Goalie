@@ -10,7 +10,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "goals";
     public static final String TABLE_NAME = "goalTable";
 
-    public static final String C_ID = "id";
+    public static final String ID = "_id";
 
     public static final String TITLE = "title";
     public static final String CATEGORY = "type";
@@ -27,16 +27,16 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final int VERSION = 2;
 
     private final String createDB = "create table if not exists " + TABLE_NAME + " ( "
-            + C_ID + " integer primary key autoincrement, "
-            + TITLE + " text, "
-            + CATEGORY + " text, "
-            + DESCRIPTION + " text, "
-            + STARTDAY + " integer, "
-            + STARTMONTH + " integer, "
-            + STARTYEAR + " integer, "
-            + ENDDAY + " integer, "
-            + ENDMONTH + " integer, "
-            + ENDYEAR + " integer)";
+            + ID + " INTEGER primary key autoincrement, "
+            + TITLE + " TEXT, "
+            + CATEGORY + " TEXT, "
+            + DESCRIPTION + " TEXT, "
+            + STARTDAY + " INTEGER, "
+            + STARTMONTH + " INTEGER, "
+            + STARTYEAR + " INTEGER, "
+            + ENDDAY + " INTEGER, "
+            + ENDMONTH + " INTEGER, "
+            + ENDYEAR + " INTEGER)";
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, VERSION);

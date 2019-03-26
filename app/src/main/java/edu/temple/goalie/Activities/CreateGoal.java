@@ -40,6 +40,9 @@ public class CreateGoal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_goal);
 
+        mDBHelper = new DBHelper(this);
+        db = mDBHelper.getWritableDatabase();
+
         //Set everything
         CategoryAdapter categoryAdapter = new CategoryAdapter(this,CATEGORY);
         Spinner categorySpinner = findViewById(R.id.categorySpinner);
@@ -132,6 +135,8 @@ public class CreateGoal extends AppCompatActivity {
                     Toast.makeText(CreateGoal.this, "One field is empty", Toast.LENGTH_SHORT).show();
                 }
                 else{
+
+                    //Put info into database
                     ContentValues cv = new ContentValues();
                     cv.put(mDBHelper.TITLE, editName.getText().toString());
                     cv.put(mDBHelper.CATEGORY,category);
@@ -142,6 +147,8 @@ public class CreateGoal extends AppCompatActivity {
                     cv.put(mDBHelper.ENDDAY,endDay);
                     cv.put(mDBHelper.ENDMONTH,endMonth);
                     cv.put(mDBHelper.ENDYEAR,endYear);
+                    db.insert(mDBHelper.TABLE_NAME,null,cv);
+                    //Go back to main activity
                     Intent toMainIntent = new Intent(CreateGoal.this,MainActivity.class);
                     startActivity(toMainIntent);
 
