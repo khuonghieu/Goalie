@@ -37,26 +37,26 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Set list view
-//        list = findViewById(R.id.goalList);
-//        mDBHelper = new DBHelper(this);
-//        db= mDBHelper.getWritableDatabase();
-//
-//        String[] from = {mDBHelper.TITLE, mDBHelper.CATEGORY, mDBHelper.DESCRIPTION,
-//                        mDBHelper.STARTDAY.toString(), mDBHelper.STARTMONTH.toString(), mDBHelper.STARTYEAR.toString(),
-//                        mDBHelper.ENDDAY.toString(), mDBHelper.ENDMONTH.toString(), mDBHelper.ENDYEAR.toString() };
-//
-//        final String[] column = {mDBHelper.ID, mDBHelper.TITLE, mDBHelper.CATEGORY, mDBHelper.DESCRIPTION,
-//                                mDBHelper.STARTDAY.toString(), mDBHelper.STARTMONTH.toString(), mDBHelper.STARTYEAR.toString(),
-//                                mDBHelper.ENDDAY.toString(), mDBHelper.ENDMONTH.toString(),mDBHelper.ENDYEAR.toString()};
-//
-//        int[] to = {R.id.title, R.id.category, R.id.description, R.id.startDay, R.id.startMonth, R.id.startYear,
-//                    R.id.endDay, R.id.endMonth, R.id.endYear};
-//
-//        Cursor cursor = db.query(mDBHelper.TABLE_NAME, column, null, null ,null, null, null);
-//        //Cursor cursor = db.rawQuery("select * from " + mDBHelper.TABLE_NAME, null);
-//        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.list_entry, cursor, from, to, 0);
-//
-//        list.setAdapter(adapter);
+        list = findViewById(R.id.goalList);
+        mDBHelper = new DBHelper(this);
+        db = mDBHelper.getWritableDatabase();
+
+        String[] from = {mDBHelper.TITLE, mDBHelper.CATEGORY, mDBHelper.DESCRIPTION,
+                mDBHelper.STARTDAY.toString(), mDBHelper.STARTMONTH.toString(), mDBHelper.STARTYEAR.toString(),
+                mDBHelper.ENDDAY.toString(), mDBHelper.ENDMONTH.toString(), mDBHelper.ENDYEAR.toString()};
+
+        final String[] column = {mDBHelper.ID, mDBHelper.TITLE, mDBHelper.CATEGORY, mDBHelper.DESCRIPTION,
+                mDBHelper.STARTDAY.toString(), mDBHelper.STARTMONTH.toString(), mDBHelper.STARTYEAR.toString(),
+                mDBHelper.ENDDAY.toString(), mDBHelper.ENDMONTH.toString(), mDBHelper.ENDYEAR.toString()};
+
+        int[] to = {R.id.title, R.id.category, R.id.description, R.id.startDay, R.id.startMonth, R.id.startYear,
+                R.id.endDay, R.id.endMonth, R.id.endYear};
+
+        Cursor cursor = db.query(mDBHelper.TABLE_NAME, column, null, null, null, null, null);
+        //Cursor cursor = db.rawQuery("select * from " + mDBHelper.TABLE_NAME, null);
+        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.list_entry, cursor, from, to, 0);
+
+        list.setAdapter(adapter);
 //        list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
 //            public void onItemClick(AdapterView<?> listView, View view, int position,
 //                                    long id){

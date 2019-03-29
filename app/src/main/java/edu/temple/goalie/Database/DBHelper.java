@@ -10,7 +10,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "goals";
     public static final String TABLE_NAME = "goalTable";
 
-    public static final String ID = "id";
+    public static final String ID = "_id";
 
     public static final String TITLE = "title";
     public static final String CATEGORY = "type";
