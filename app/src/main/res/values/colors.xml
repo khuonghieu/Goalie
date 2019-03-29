@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF0D00</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#461B1B</color>
+    <color name="LOG_IN_TEXT_COLOR">#FFFFFF</color>
+    <color name="LOG_IN_BLOCK_COLOR">#FF4C4C</color>
+    <color name="SIGN_UP_BLOCK_COLOR">#1FA5FF</color>
+    <color name="BACKGROUND_COLOR">#FFB75E</color>
+    <color name="QUOTE_TEXT_COLOR">#000000</color>
+</resources>
