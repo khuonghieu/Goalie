@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import edu.temple.goalie.R;
+
 public class home_page extends AppCompatActivity {
 
     @Override

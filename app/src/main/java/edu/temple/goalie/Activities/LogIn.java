@@ -11,7 +11,9 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import edu.temple.goalie.R;
+
+public class LogIn extends AppCompatActivity {
 
 
     @Override
