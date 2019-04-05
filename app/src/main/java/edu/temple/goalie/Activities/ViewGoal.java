@@ -37,12 +37,22 @@ public class ViewGoal extends AppCompatActivity {
                 viewGoalTitle.setText(cursor.getString(cursor.getColumnIndex(dbHelper.TITLE)));
                 viewGoalCategory.setText(cursor.getString(cursor.getColumnIndex(dbHelper.CATEGORY)));
                 viewGoalDescription.setText(cursor.getString(cursor.getColumnIndex(dbHelper.DESCRIPTION)));
-                viewGoalStartDay.setText(cursor.getString(cursor.getColumnIndex(dbHelper.STARTDAY)));
-                viewGoalStartMonth.setText(cursor.getString(cursor.getColumnIndex(dbHelper.STARTMONTH)));
+                viewGoalStartDay.setText(cursor.getString(cursor.getColumnIndex(dbHelper.STARTDAY)) + "/");
+                viewGoalStartMonth.setText(cursor.getString(cursor.getColumnIndex(dbHelper.STARTMONTH)) + "/");
                 viewGoalStartYear.setText(cursor.getString(cursor.getColumnIndex(dbHelper.STARTYEAR)));
-                viewGoalEndDay.setText(cursor.getString(cursor.getColumnIndex(dbHelper.ENDDAY)));
-                viewGoalEndMonth.setText(cursor.getString(cursor.getColumnIndex(dbHelper.ENDMONTH)));
+                viewGoalEndDay.setText(cursor.getString(cursor.getColumnIndex(dbHelper.ENDDAY)) + "/");
+                viewGoalEndMonth.setText(cursor.getString(cursor.getColumnIndex(dbHelper.ENDMONTH)) + "/");
                 viewGoalEndYear.setText(cursor.getString(cursor.getColumnIndex(dbHelper.ENDYEAR)));
+
+                viewGoalTitle.setTextSize(30);
+                viewGoalCategory.setTextSize(20);
+                viewGoalDescription.setTextSize(20);
+                viewGoalStartDay.setTextSize(15);
+                viewGoalStartMonth.setTextSize(15);
+                viewGoalStartYear.setTextSize(15);
+                viewGoalEndDay.setTextSize(15);
+                viewGoalEndMonth.setTextSize(15);
+                viewGoalEndYear.setTextSize(15);
             }
             cursor.close();
         }
