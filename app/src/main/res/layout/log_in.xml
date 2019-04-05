@@ -6,28 +6,62 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <android.support.design.widget.AppBarLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
+        android:background="@color/BACKGROUND_COLOR"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".MainActivity"
+        tools:showIn="@layout/activity_main">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <ImageView
+            android:id="@+id/HOME_LOGO"
+            android:layout_width="141dp"
+            android:layout_height="163dp"
+            android:layout_marginStart="135dp"
+            android:layout_marginLeft="135dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="135dp"
+            android:layout_marginRight="135dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/goalie"
+            app:layout_constraintBottom_toTopOf="@+id/HOME_QUOTE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </android.support.design.widget.AppBarLayout>
+        <TextView
+            android:id="@+id/HOME_QUOTE"
+            android:layout_width="406dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="73dp"
+            android:text="You can score every goal."
+            android:textAlignment="center"
+            android:textColor="@color/QUOTE_TEXT_COLOR"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.448"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HOME_LOGO" />
 
-    <include layout="@layout/content_main" />
+        <Button
+            android:id="@+id/logInButton"
+            android:layout_width="207dp"
+            android:layout_height="102dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/design_default_color_primary_dark"
+            android:text="Log In"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HOME_QUOTE" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.design.widget.CoordinatorLayout>

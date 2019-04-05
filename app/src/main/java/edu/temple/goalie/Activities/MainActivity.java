@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
+import java.util.ArrayList;
+
 import edu.temple.goalie.Database.DBHelper;
 import edu.temple.goalie.R;
 
@@ -53,18 +55,17 @@ public class MainActivity extends AppCompatActivity {
                 R.id.endDay, R.id.endMonth, R.id.endYear};
 
         Cursor cursor = db.query(mDBHelper.TABLE_NAME, column, null, null, null, null, null);
-        //Cursor cursor = db.rawQuery("select * from " + mDBHelper.TABLE_NAME, null);
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.list_entry, cursor, from, to, 0);
 
         list.setAdapter(adapter);
-//        list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-//            public void onItemClick(AdapterView<?> listView, View view, int position,
-//                                    long id){
-//                Intent intent = new Intent(MainActivity.this, View_Note.class);
-//                intent.putExtra(getString(R.string.rodId), id);
-//                startActivity(intent);
-//            }
-//
-//        });
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> listView, View view, int position,
+                                    long id) {
+                Intent intent = new Intent(MainActivity.this, ViewGoal.class);
+                intent.putExtra("goalIdSelected", id);
+                startActivity(intent);
+            }
+
+        });
     }
 }
