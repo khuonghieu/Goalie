@@ -1,42 +1,58 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:visibility="visible"
-    tools:context=".Activities.MainActivity">
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
 
-    <ListView
-        android:id="@+id/goalList"
-        android:layout_width="390dp"
-        android:layout_height="716dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="0dp"
-        android:visibility="visible" />
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white"></android.support.v7.widget.Toolbar>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/createNoteButton"
-        android:layout_width="73dp"
-        android:layout_height="72dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_gravity="end|bottom"
-        android:layout_marginStart="274dp"
-        android:layout_marginTop="468dp"
-        android:src="@android:drawable/ic_input_add"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
         android:visibility="visible"
-        app:elevation="0dp"
-        app:fabSize="normal" />
+        tools:context=".Activities.MainActivity">
+
+        <ListView
+            android:id="@+id/goalList"
+            android:layout_width="390dp"
+            android:layout_height="716dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="0dp"
+            android:visibility="visible" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/createNoteButton"
+            android:layout_width="73dp"
+            android:layout_height="72dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="end|bottom"
+            android:layout_marginStart="274dp"
+            android:layout_marginTop="468dp"
+            android:src="@android:drawable/ic_input_add"
+            android:visibility="visible"
+            app:elevation="0dp"
+            app:fabSize="normal" />
 
 
-</RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

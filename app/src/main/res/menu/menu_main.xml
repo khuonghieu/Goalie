@@ -7,4 +7,16 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/addGoal"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="Add Goal"
+        android:visible="true"
+        app:showAsAction="ifRoom"></item>
+    <item
+        android:id="@+id/sortGoal"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        android:title="Sort Goals"
+        android:visible="true"
+        app:showAsAction="ifRoom|withText"></item>
 </menu>

@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -26,17 +28,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        FloatingActionButton createNoteButton = findViewById(R.id.createNoteButton);
-        createNoteButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent toCreateNoteActivity = new Intent(MainActivity.this, CreateGoal.class);
-                startActivity(toCreateNoteActivity);
-            }
-        });
-
 
         //Set list view
         list = findViewById(R.id.goalList);
@@ -67,6 +58,14 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+        Toolbar toolbar = (Toolbar) findViewById(R.id.mainToolBar);
+        setSupportActionBar(toolbar);
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
 }
