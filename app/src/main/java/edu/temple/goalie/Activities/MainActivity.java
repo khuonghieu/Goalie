@@ -44,12 +44,12 @@ public class MainActivity extends AppCompatActivity {
         db = mDBHelper.getWritableDatabase();
 
         String[] from = {mDBHelper.TITLE, mDBHelper.CATEGORY, mDBHelper.DESCRIPTION,
-                mDBHelper.STARTDAY.toString(), mDBHelper.STARTMONTH.toString(), mDBHelper.STARTYEAR.toString(),
-                mDBHelper.ENDDAY.toString(), mDBHelper.ENDMONTH.toString(), mDBHelper.ENDYEAR.toString()};
+                mDBHelper.STARTDAY, mDBHelper.STARTMONTH, mDBHelper.STARTYEAR,
+                mDBHelper.ENDDAY, mDBHelper.ENDMONTH, mDBHelper.ENDYEAR};
 
         final String[] column = {mDBHelper.ID, mDBHelper.TITLE, mDBHelper.CATEGORY, mDBHelper.DESCRIPTION,
-                mDBHelper.STARTDAY.toString(), mDBHelper.STARTMONTH.toString(), mDBHelper.STARTYEAR.toString(),
-                mDBHelper.ENDDAY.toString(), mDBHelper.ENDMONTH.toString(), mDBHelper.ENDYEAR.toString()};
+                mDBHelper.STARTDAY, mDBHelper.STARTMONTH, mDBHelper.STARTYEAR,
+                mDBHelper.ENDDAY, mDBHelper.ENDMONTH, mDBHelper.ENDYEAR};
 
         int[] to = {R.id.title, R.id.category, R.id.description, R.id.startDay, R.id.startMonth, R.id.startYear,
                 R.id.endDay, R.id.endMonth, R.id.endYear};
@@ -67,5 +67,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
     }
 }
