@@ -39,6 +39,8 @@ public class CategoryAdapter extends BaseAdapter {
 
         TextView colorView = new TextView(this.context);
         colorView.setText(categoryList[position]);
+        colorView.setTextSize(20);
+        colorView.setTextColor(Color.BLACK);
         return colorView;
     }
 }
