@@ -1,110 +1,126 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.ViewGoal">
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="395dp"
-        android:layout_height="715dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/createGoalToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:visibility="visible"
+        app:titleTextColor="@android:color/white"></android.support.v7.widget.Toolbar>
 
-        <TextView
-            android:id="@+id/ViewGoalTitle"
-            android:layout_width="match_parent"
-            android:layout_height="41dp"
-            android:background="@android:drawable/editbox_dropdown_light_frame"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="TextView"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/ViewGoalCategory"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:background="@android:drawable/editbox_dropdown_light_frame"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/ViewGoalDescription"
-            android:layout_width="match_parent"
-            android:layout_height="61dp"
-            android:background="@android:drawable/editbox_background_normal"
-            android:text="TextView" />
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.ViewGoal">
 
         <LinearLayout
-            android:layout_width="312dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_width="395dp"
+            android:layout_height="715dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
             <TextView
-                android:id="@+id/ViewGoalStartDay"
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
+                android:id="@+id/ViewGoalTitle"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="TextView"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ViewGoalCategory"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
                 android:gravity="center_horizontal|center_vertical"
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/ViewGoalStartMonth"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_horizontal|center_vertical"
+                android:id="@+id/ViewGoalDescription"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:background="@android:drawable/editbox_background_normal"
                 android:text="TextView" />
 
-            <TextView
-                android:id="@+id/ViewGoalStartYear"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="312dp"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="--" />
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/ViewGoalEndDay"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="TextView" />
+                <TextView
+                    android:id="@+id/ViewGoalStartDay"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="TextView" />
 
-            <TextView
-                android:id="@+id/ViewGoalEndMonth"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="TextView" />
+                <TextView
+                    android:id="@+id/ViewGoalStartMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="TextView" />
 
-            <TextView
-                android:id="@+id/ViewGoalEndYear"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="TextView" />
+                <TextView
+                    android:id="@+id/ViewGoalStartYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="--" />
+
+                <TextView
+                    android:id="@+id/ViewGoalEndDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/ViewGoalEndMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/ViewGoalEndYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="TextView" />
+
+            </LinearLayout>
 
         </LinearLayout>
-
-    </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

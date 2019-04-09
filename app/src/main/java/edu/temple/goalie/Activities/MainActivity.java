@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         //Set list view
         list = findViewById(R.id.goalList);
         mDBHelper = new DBHelper(this);
@@ -61,6 +60,25 @@ public class MainActivity extends AppCompatActivity {
         });
         Toolbar toolbar = findViewById(R.id.mainToolBar);
         setSupportActionBar(toolbar);
+
+    }
+
+    public void setList() {
+        String[] from = {mDBHelper.TITLE, mDBHelper.CATEGORY, mDBHelper.DESCRIPTION,
+                mDBHelper.STARTDAY, mDBHelper.STARTMONTH, mDBHelper.STARTYEAR,
+                mDBHelper.ENDDAY, mDBHelper.ENDMONTH, mDBHelper.ENDYEAR};
+
+        final String[] column = {mDBHelper.ID, mDBHelper.TITLE, mDBHelper.CATEGORY, mDBHelper.DESCRIPTION,
+                mDBHelper.STARTDAY, mDBHelper.STARTMONTH, mDBHelper.STARTYEAR,
+                mDBHelper.ENDDAY, mDBHelper.ENDMONTH, mDBHelper.ENDYEAR};
+
+        int[] to = {R.id.title, R.id.category, R.id.description, R.id.startDay, R.id.startMonth, R.id.startYear,
+                R.id.endDay, R.id.endMonth, R.id.endYear};
+
+        Cursor cursor = db.query(mDBHelper.TABLE_NAME, column, null, null, null, null, null);
+        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.list_entry, cursor, from, to, 0);
+
+        list.setAdapter(adapter);
     }
 
     @Override
@@ -105,4 +123,5 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
 }

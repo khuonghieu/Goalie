@@ -1,9 +1,14 @@
 package edu.temple.goalie.Activities;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
 import edu.temple.goalie.Database.DBHelper;
@@ -13,19 +18,29 @@ public class ViewGoal extends AppCompatActivity {
 
     SQLiteDatabase db;
     DBHelper dbHelper;
+    TextView viewGoalTitle;
+    TextView viewGoalCategory;
+    TextView viewGoalDescription;
+    TextView viewGoalStartDay;
+    TextView viewGoalStartMonth;
+    TextView viewGoalStartYear;
+    TextView viewGoalEndDay;
+    TextView viewGoalEndMonth;
+    TextView viewGoalEndYear;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_goal);
-        TextView viewGoalTitle = findViewById(R.id.ViewGoalTitle);
-        TextView viewGoalCategory = findViewById(R.id.ViewGoalCategory);
-        TextView viewGoalDescription = findViewById(R.id.ViewGoalDescription);
-        TextView viewGoalStartDay = findViewById(R.id.ViewGoalStartDay);
-        TextView viewGoalStartMonth = findViewById(R.id.ViewGoalStartMonth);
-        TextView viewGoalStartYear = findViewById(R.id.ViewGoalStartYear);
-        TextView viewGoalEndDay = findViewById(R.id.ViewGoalEndDay);
-        TextView viewGoalEndMonth = findViewById(R.id.ViewGoalEndMonth);
-        TextView viewGoalEndYear = findViewById(R.id.ViewGoalEndYear);
+        viewGoalTitle = findViewById(R.id.ViewGoalTitle);
+        viewGoalCategory = findViewById(R.id.ViewGoalCategory);
+        viewGoalDescription = findViewById(R.id.ViewGoalDescription);
+        viewGoalStartDay = findViewById(R.id.ViewGoalStartDay);
+        viewGoalStartMonth = findViewById(R.id.ViewGoalStartMonth);
+        viewGoalStartYear = findViewById(R.id.ViewGoalStartYear);
+        viewGoalEndDay = findViewById(R.id.ViewGoalEndDay);
+        viewGoalEndMonth = findViewById(R.id.ViewGoalEndMonth);
+        viewGoalEndYear = findViewById(R.id.ViewGoalEndYear);
 
         final long id = getIntent().getExtras().getLong("goalIdSelected");
 
@@ -55,6 +70,30 @@ public class ViewGoal extends AppCompatActivity {
                 viewGoalEndYear.setTextSize(15);
             }
             cursor.close();
+        }
+        Toolbar toolbar = findViewById(R.id.createGoalToolbar);
+        setSupportActionBar(toolbar);
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_viewgoal, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle presses on the action bar items
+        switch (item.getItemId()) {
+            case R.id.deleteGoal:
+                db.execSQL("DELETE FROM " + dbHelper.TABLE_NAME + " WHERE " + dbHelper.TITLE + "='" +
+                        viewGoalTitle.getText() + "'");
+                db.close();
+                Intent intent = new Intent(ViewGoal.this, MainActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }

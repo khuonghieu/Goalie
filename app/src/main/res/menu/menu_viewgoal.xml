@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.goalie.ViewGoal">
+    <item
+        android:id="@+id/deleteGoal"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:title="Delete Goal"
+        android:visible="true"
+        app:showAsAction="always"></item>
+    <item
+        android:id="@+id/editGoal"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Edit Goal"
+        app:showAsAction="always"></item>
+
+</menu>
