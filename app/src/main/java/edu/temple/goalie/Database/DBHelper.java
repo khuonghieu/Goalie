@@ -3,7 +3,6 @@ package edu.temple.goalie.Database;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.EventLogTags;
 
 public class DBHelper extends SQLiteOpenHelper {
 
