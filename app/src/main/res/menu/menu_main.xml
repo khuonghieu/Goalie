@@ -4,24 +4,19 @@
     tools:context="com.example.goalie.MainActivity">
     <item
         android:id="@+id/addGoal"
-        android:icon="@android:drawable/ic_input_add"
+        android:icon="@drawable/ic_add"
         android:title="Add Goal"
         android:visible="true"
         app:showAsAction="always"></item>
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
-    <item
         android:id="@+id/sortGoal"
-        android:icon="@android:drawable/arrow_down_float"
+        android:icon="@drawable/ic_sort_ascending"
         android:title="Sort Goals"
         android:visible="true"
         app:showAsAction="always"></item>
     <item
         android:id="@+id/reverseSortGoal"
-        android:icon="@android:drawable/arrow_up_float"
+        android:icon="@drawable/ic_sort_descending"
         android:title="Reverse Sort"
         app:showAsAction="always"></item>
 

@@ -30,15 +30,15 @@ public class MainActivity extends AppCompatActivity {
         mDBHelper = new DBHelper(this);
         db = mDBHelper.getWritableDatabase();
 
-        String[] from = {mDBHelper.TITLE, mDBHelper.CATEGORY, mDBHelper.DESCRIPTION,
+        String[] from = {mDBHelper.TITLE, mDBHelper.CATEGORY,
                 mDBHelper.STARTDAY, mDBHelper.STARTMONTH, mDBHelper.STARTYEAR,
                 mDBHelper.ENDDAY, mDBHelper.ENDMONTH, mDBHelper.ENDYEAR};
 
-        final String[] column = {mDBHelper.ID, mDBHelper.TITLE, mDBHelper.CATEGORY, mDBHelper.DESCRIPTION,
+        final String[] column = {mDBHelper.ID, mDBHelper.TITLE, mDBHelper.CATEGORY,
                 mDBHelper.STARTDAY, mDBHelper.STARTMONTH, mDBHelper.STARTYEAR,
                 mDBHelper.ENDDAY, mDBHelper.ENDMONTH, mDBHelper.ENDYEAR};
 
-        int[] to = {R.id.title, R.id.category, R.id.description, R.id.startDay, R.id.startMonth, R.id.startYear,
+        int[] to = {R.id.title, R.id.category, R.id.startDay, R.id.startMonth, R.id.startYear,
                 R.id.endDay, R.id.endMonth, R.id.endYear};
 
         Cursor cursor = db.query(mDBHelper.TABLE_NAME, column, null, null, null, null, null);
@@ -59,24 +59,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void setList() {
-        String[] from = {mDBHelper.TITLE, mDBHelper.CATEGORY, mDBHelper.DESCRIPTION,
-                mDBHelper.STARTDAY, mDBHelper.STARTMONTH, mDBHelper.STARTYEAR,
-                mDBHelper.ENDDAY, mDBHelper.ENDMONTH, mDBHelper.ENDYEAR};
-
-        final String[] column = {mDBHelper.ID, mDBHelper.TITLE, mDBHelper.CATEGORY, mDBHelper.DESCRIPTION,
-                mDBHelper.STARTDAY, mDBHelper.STARTMONTH, mDBHelper.STARTYEAR,
-                mDBHelper.ENDDAY, mDBHelper.ENDMONTH, mDBHelper.ENDYEAR};
-
-        int[] to = {R.id.title, R.id.category, R.id.description, R.id.startDay, R.id.startMonth, R.id.startYear,
-                R.id.endDay, R.id.endMonth, R.id.endYear};
-
-        Cursor cursor = db.query(mDBHelper.TABLE_NAME, column, null, null, null, null, null);
-        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.list_entry, cursor, from, to, 0);
-
-        list.setAdapter(adapter);
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -86,13 +68,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        final String[] sortedColumn = {mDBHelper.ID, mDBHelper.TITLE, mDBHelper.CATEGORY, mDBHelper.DESCRIPTION,
+        final String[] sortedColumn = {mDBHelper.ID, mDBHelper.TITLE, mDBHelper.CATEGORY,
                 mDBHelper.STARTDAY, mDBHelper.STARTMONTH, mDBHelper.STARTYEAR,
                 mDBHelper.ENDDAY, mDBHelper.ENDMONTH, mDBHelper.ENDYEAR};
-        String[] from = {mDBHelper.TITLE, mDBHelper.CATEGORY, mDBHelper.DESCRIPTION,
+        String[] from = {mDBHelper.TITLE, mDBHelper.CATEGORY,
                 mDBHelper.STARTDAY, mDBHelper.STARTMONTH, mDBHelper.STARTYEAR,
                 mDBHelper.ENDDAY, mDBHelper.ENDMONTH, mDBHelper.ENDYEAR};
-        int[] to = {R.id.title, R.id.category, R.id.description, R.id.startDay, R.id.startMonth, R.id.startYear,
+        int[] to = {R.id.title, R.id.category, R.id.startDay, R.id.startMonth, R.id.startYear,
                 R.id.endDay, R.id.endMonth, R.id.endYear};
 
         // Handle presses on the action bar items

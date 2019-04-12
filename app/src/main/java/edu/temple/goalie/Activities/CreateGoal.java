@@ -147,6 +147,7 @@ public class CreateGoal extends AppCompatActivity {
                     cv.put(mDBHelper.ENDDAY,endDay);
                     cv.put(mDBHelper.ENDMONTH,endMonth);
                     cv.put(mDBHelper.ENDYEAR,endYear);
+                    cv.put(mDBHelper.JOURNAL, " ");
                     db.insert(mDBHelper.TABLE_NAME,null,cv);
                     //Go back to main activity
                     Intent toMainIntent = new Intent(CreateGoal.this,MainActivity.class);

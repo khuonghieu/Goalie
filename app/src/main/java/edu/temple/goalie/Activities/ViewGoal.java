@@ -1,14 +1,17 @@
 package edu.temple.goalie.Activities;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.SimpleCursorAdapter;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import edu.temple.goalie.Database.DBHelper;
@@ -27,6 +30,7 @@ public class ViewGoal extends AppCompatActivity {
     TextView viewGoalEndDay;
     TextView viewGoalEndMonth;
     TextView viewGoalEndYear;
+    TextView viewGoalJournal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +45,7 @@ public class ViewGoal extends AppCompatActivity {
         viewGoalEndDay = findViewById(R.id.ViewGoalEndDay);
         viewGoalEndMonth = findViewById(R.id.ViewGoalEndMonth);
         viewGoalEndYear = findViewById(R.id.ViewGoalEndYear);
+        viewGoalJournal = findViewById(R.id.journal);
 
         final long id = getIntent().getExtras().getLong("goalIdSelected");
 
@@ -58,10 +63,8 @@ public class ViewGoal extends AppCompatActivity {
                 viewGoalEndDay.setText(cursor.getString(cursor.getColumnIndex(dbHelper.ENDDAY)) + "/");
                 viewGoalEndMonth.setText(cursor.getString(cursor.getColumnIndex(dbHelper.ENDMONTH)) + "/");
                 viewGoalEndYear.setText(cursor.getString(cursor.getColumnIndex(dbHelper.ENDYEAR)));
+                viewGoalJournal.setText(cursor.getString(cursor.getColumnIndex(dbHelper.JOURNAL)));
 
-                viewGoalTitle.setTextSize(30);
-                viewGoalCategory.setTextSize(20);
-                viewGoalDescription.setTextSize(20);
                 viewGoalStartDay.setTextSize(15);
                 viewGoalStartMonth.setTextSize(15);
                 viewGoalStartYear.setTextSize(15);
@@ -92,6 +95,39 @@ public class ViewGoal extends AppCompatActivity {
                 Intent intent = new Intent(ViewGoal.this, MainActivity.class);
                 startActivity(intent);
                 return true;
+
+            case R.id.editGoal:
+                final Dialog setJournal = new Dialog(this);
+                setJournal.setContentView(R.layout.dialog_set_journal);
+                final EditText editJournal = setJournal.findViewById(R.id.editJournal);
+                Cursor cursor2 = db.rawQuery("select * from " + dbHelper.TABLE_NAME + " where " + dbHelper.TITLE + " = '" + viewGoalTitle.getText() + "'" +
+                        " and " + dbHelper.DESCRIPTION + " ='" + viewGoalDescription.getText() + "'", null);
+                if (cursor2 != null) {
+                    if (cursor2.moveToFirst()) {
+                        editJournal.setText(cursor2.getString(cursor2.getColumnIndex(dbHelper.JOURNAL)));
+                    }
+                }
+                Button saveJournal = setJournal.findViewById(R.id.saveJournal);
+                Button dismissJournal = setJournal.findViewById(R.id.dismissJournal);
+
+                saveJournal.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        db.execSQL("UPDATE " + dbHelper.TABLE_NAME + " SET " + dbHelper.JOURNAL + "='" +
+                                editJournal.getText().toString() + "' WHERE " + dbHelper.TITLE + "='" + viewGoalTitle.getText() +
+                                "' and " + dbHelper.DESCRIPTION + "='" + viewGoalDescription.getText() + "'");
+                        setJournal.dismiss();
+                    }
+                });
+
+                dismissJournal.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        setJournal.dismiss();
+                    }
+                });
+                setJournal.show();
+                //return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

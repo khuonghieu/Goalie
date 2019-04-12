@@ -24,6 +24,8 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String ENDMONTH = "endMonth";
     public static final String ENDYEAR = "endYear";
 
+    public static final String JOURNAL = "journal";
+
     public static final int VERSION = 2;
 
     private final String createDB = "create table if not exists " + TABLE_NAME + " ( "
@@ -36,7 +38,8 @@ public class DBHelper extends SQLiteOpenHelper {
             + STARTYEAR + " INTEGER, "
             + ENDDAY + " INTEGER, "
             + ENDMONTH + " INTEGER, "
-            + ENDYEAR + " INTEGER)";
+            + ENDYEAR + " INTEGER, "
+            + JOURNAL + " TEXT)";
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, VERSION);
