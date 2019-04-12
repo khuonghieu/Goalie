@@ -10,7 +10,7 @@
         android:id="@+id/mainToolBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/SIGN_UP_BLOCK_COLOR"
         android:minHeight="?attr/actionBarSize"
         app:titleTextColor="@android:color/white"></android.support.v7.widget.Toolbar>
 

@@ -145,7 +145,10 @@
                 android:id="@+id/journal"
                 android:layout_width="match_parent"
                 android:layout_height="491dp"
-                android:text="TextView" />
+                android:paddingHorizontal="@dimen/activity_horizontal_margin"
+                android:paddingVertical="@dimen/nav_header_vertical_spacing"
+                android:textSize="24sp"
+                android:visibility="visible" />
 
         </LinearLayout>
     </android.support.constraint.ConstraintLayout>

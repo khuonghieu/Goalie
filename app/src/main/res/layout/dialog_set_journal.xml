@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:text="Edit journal"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <EditText
@@ -17,9 +17,11 @@
         android:layout_width="match_parent"
         android:layout_height="192dp"
         android:ems="10"
-        android:inputType="text"
-        android:lineSpacingExtra="8sp"
-        android:textAlignment="viewStart" />
+        android:inputType="textMultiLine"
+        android:lineSpacingExtra="10sp"
+        android:textAlignment="viewStart"
+        android:textSize="18sp"
+        android:visibility="visible" />
 
     <LinearLayout
         android:layout_width="match_parent"

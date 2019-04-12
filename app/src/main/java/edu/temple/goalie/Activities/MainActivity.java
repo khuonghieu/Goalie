@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
+import edu.temple.goalie.Adapter.GoalListAdapter;
 import edu.temple.goalie.Database.DBHelper;
 import edu.temple.goalie.R;
 
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.endDay, R.id.endMonth, R.id.endYear};
 
         Cursor cursor = db.query(mDBHelper.TABLE_NAME, column, null, null, null, null, null);
-        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.list_entry, cursor, from, to, 0);
+        GoalListAdapter adapter = new GoalListAdapter(this, R.layout.list_entry, cursor, from, to, 0);
 
         list.setAdapter(adapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {

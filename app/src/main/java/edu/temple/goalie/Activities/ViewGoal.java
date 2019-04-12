@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import edu.temple.goalie.Database.DBHelper;
@@ -117,6 +118,7 @@ public class ViewGoal extends AppCompatActivity {
                                 editJournal.getText().toString() + "' WHERE " + dbHelper.TITLE + "='" + viewGoalTitle.getText() +
                                 "' and " + dbHelper.DESCRIPTION + "='" + viewGoalDescription.getText() + "'");
                         setJournal.dismiss();
+                        ViewGoal.this.recreate();
                     }
                 });
 

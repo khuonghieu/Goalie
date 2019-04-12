@@ -7,7 +7,7 @@
     android:paddingBottom="8dp">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/goalImage"
         android:layout_width="187dp"
         android:layout_height="88dp"
         android:layout_weight="1"
