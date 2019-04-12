@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Goal Name"
-                android:inputType="text" />
+                android:inputType="text|textCapSentences" />
         </android.support.design.widget.TextInputLayout>
 
         <Spinner
@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Description"
-                android:inputType="text" />
+                android:inputType="text|textCapSentences" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
