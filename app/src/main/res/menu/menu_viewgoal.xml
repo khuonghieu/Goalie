@@ -13,5 +13,10 @@
         android:icon="@drawable/ic_edit"
         android:title="Edit Goal"
         app:showAsAction="always"></item>
-
+    <item
+        android:id="@+id/editJournal"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="Journal"
+        android:visible="true"
+        app:showAsAction="always"></item>
 </menu>

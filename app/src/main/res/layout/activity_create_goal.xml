@@ -20,11 +20,13 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="59dp"
+            android:background="@color/DARK_BACKGROUND_COLOR"
             android:gravity="center_horizontal"
             android:text="Create Goal"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="33dp"
+
+            android:textColor="@color/pinkRed"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
         <android.support.design.widget.TextInputLayout
@@ -36,17 +38,19 @@
             <EditText
                 android:id="@+id/editGoalName"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:ems="10"
                 android:hint="Goal Name"
-                android:inputType="text|textCapSentences" />
+
+                android:inputType="text"
+                android:textColor="@color/QUOTE_TEXT_COLOR" />
         </android.support.design.widget.TextInputLayout>
 
         <Spinner
             android:id="@+id/categorySpinner"
             style="@android:style/Widget.Holo.Light.Spinner"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:gravity="left|center_vertical|fill_vertical"
             android:visibility="visible" />
 
@@ -58,11 +62,12 @@
 
             <EditText
                 android:id="@+id/editDescription"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
                 android:ems="10"
                 android:hint="Description"
-                android:inputType="text|textCapSentences" />
+                android:inputType="text"
+                android:textColor="@color/QUOTE_TEXT_COLOR" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -73,11 +78,12 @@
 
             <EditText
                 android:id="@+id/editStartDate"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:ems="10"
                 android:hint="Set start date"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textColor="@color/QUOTE_TEXT_COLOR" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -88,18 +94,20 @@
 
             <EditText
                 android:id="@+id/editEndDate"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:ems="10"
                 android:hint="Set end date"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textColor="@color/QUOTE_TEXT_COLOR" />
 
             <Button
                 android:id="@+id/createGoalButton"
-                style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="81dp"
+                android:backgroundTint="@color/Blue"
                 android:text="Go for it"
+                android:textSize="20sp"
                 tools:layout_editor_absoluteY="731dp" />
 
         </android.support.design.widget.TextInputLayout>

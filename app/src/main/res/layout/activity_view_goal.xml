@@ -10,15 +10,21 @@
         android:id="@+id/createGoalToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/SIGN_UP_BLOCK_COLOR"
+
+        android:background="@color/Blue"
+
         android:minHeight="?attr/actionBarSize"
         android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:titleTextColor="@android:color/white"></android.support.v7.widget.Toolbar>
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/BACKGROUND_COLOR"
         tools:context=".Activities.ViewGoal">
+
 
         <LinearLayout
             android:layout_width="395dp"
@@ -28,6 +34,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:orientation="vertical"
+            android:background="@color/BACKGROUND_COLOR"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -38,36 +45,34 @@
             <TextView
                 android:id="@+id/ViewGoalTitle"
                 android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:layout_height="65dp"
+                android:background="@color/DARK_BACKGROUND_COLOR"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="TextView"
-                android:textColor="@color/QUOTE_TEXT_COLOR"
-                android:textSize="24sp"
+                android:lineSpacingExtra="50sp"
+                android:text="Goal Name"
+                android:textColor="@color/pinkRed"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/ViewGoalCategory"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:layout_height="36dp"
+                android:background="@color/DARK_BACKGROUND_COLOR"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="TextView"
-                android:textColor="@color/QUOTE_TEXT_COLOR"
-                android:textSize="14sp"
-                android:textStyle="italic" />
 
+                android:text="Category"
+                android:textColor="@android:color/black" />
             <TextView
                 android:id="@+id/ViewGoalDescription"
                 android:layout_width="match_parent"
-                android:layout_height="81dp"
+                android:layout_height="171dp"
                 android:background="@android:drawable/editbox_background_normal"
-                android:text="TextView"
-                android:textColor="@color/QUOTE_TEXT_COLOR"
-                android:textSize="18sp" />
+                android:text="Description"
+                android:textColor="@android:color/black" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="390dp"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
@@ -79,57 +84,64 @@
 
                 <TextView
                     android:id="@+id/ViewGoalStartDay"
-                    android:layout_width="24dp"
+                    android:layout_width="60dp"
                     android:layout_height="match_parent"
-                    android:gravity="center_horizontal|center_vertical" />
-
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="TextView"
+                    android:textColor="@color/QUOTE_TEXT_COLOR" />
                 <TextView
                     android:id="@+id/ViewGoalStartMonth"
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center_horizontal|center_vertical" />
+
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="TextView"
+                    android:textColor="@color/QUOTE_TEXT_COLOR" />
 
                 <TextView
                     android:id="@+id/ViewGoalStartYear"
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center_horizontal|center_vertical" />
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="TextView"
+                    android:textColor="@color/QUOTE_TEXT_COLOR" />
 
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal|center_vertical"
-                    android:text=" - " />
+                    android:text="--"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/ViewGoalEndDay"
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center_horizontal|center_vertical" />
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="TextView"
+                    android:textColor="@color/QUOTE_TEXT_COLOR" />
 
                 <TextView
                     android:id="@+id/ViewGoalEndMonth"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center_horizontal|center_vertical" />
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="TextView"
+                    android:textColor="@color/QUOTE_TEXT_COLOR" />
 
                 <TextView
                     android:id="@+id/ViewGoalEndYear"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="60dp"
+                    android:layout_height="34dp"
                     android:layout_weight="1"
-                    android:gravity="center_horizontal|center_vertical" />
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" />
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="TextView"
+                    android:textColor="@color/QUOTE_TEXT_COLOR" />
 
             </LinearLayout>
 
