@@ -7,7 +7,7 @@ import android.util.EventLogTags;
 
 public class DBHelper extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "goals";
+    public static final String DATABASE_NAME = "goalie";
     public static final String TABLE_NAME = "goalTable";
 
     public static final String ID = "_id";
