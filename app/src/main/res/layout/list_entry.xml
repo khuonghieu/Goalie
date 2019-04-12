@@ -11,10 +11,13 @@
         android:layout_width="187dp"
         android:layout_height="88dp"
         android:layout_weight="1"
+        android:adjustViewBounds="false"
+        android:baselineAlignBottom="false"
+        android:requiresFadingEdge="horizontal|vertical"
         android:scaleType="centerInside"
         android:shape="ring"
         android:visibility="visible"
-        app:srcCompat="@mipmap/ic_launcher_round"
+        app:srcCompat="@android:drawable/btn_star_big_on"
         tools:shape="ring" />
 
     <LinearLayout
