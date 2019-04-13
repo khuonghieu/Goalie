@@ -9,8 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="edu.temple.goalie.Activities.LogIn">
-            <intent-filter>
+        <activity
+            android:name=".Activities.Journal"
+            android:label="@string/title_activity_journal"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Activities.LogIn">
+            <intent-filter>gi
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
