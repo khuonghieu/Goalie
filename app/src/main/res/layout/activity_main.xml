@@ -10,11 +10,12 @@
         android:id="@+id/mainToolBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/SIGN_UP_BLOCK_COLOR"
+        android:background="@color/Blue"
         android:minHeight="?attr/actionBarSize"
         app:titleTextColor="@android:color/white"></android.support.v7.widget.Toolbar>
 
     <RelativeLayout
+        android:background="@color/DARK_BACKGROUND_COLOR"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -26,9 +27,31 @@
 
         <ListView
             android:id="@+id/goalList"
-            style="@style/Widget.AppCompat.ListView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="393dp"
+            android:layout_height="598dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/BACKGROUND_COLOR"
+            android:divider="@color/pinkRed"
+            android:dividerHeight="1dp"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="true"
             android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="214dp"
+            android:layout_height="48dp"
+            android:text="Goals"
+            android:textColor="@color/pinkRed"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
     </RelativeLayout>
 </LinearLayout>

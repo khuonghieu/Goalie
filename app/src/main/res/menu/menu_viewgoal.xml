@@ -13,5 +13,4 @@
         android:icon="@drawable/ic_edit"
         android:title="Edit Goal"
         app:showAsAction="always"></item>
-
 </menu>

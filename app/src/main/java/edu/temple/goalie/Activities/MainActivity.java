@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 mDBHelper.ENDDAY, mDBHelper.ENDMONTH, mDBHelper.ENDYEAR};
 
         final String[] column = {mDBHelper.ID, mDBHelper.TITLE, mDBHelper.CATEGORY,
+
                 mDBHelper.STARTDAY, mDBHelper.STARTMONTH, mDBHelper.STARTYEAR,
                 mDBHelper.ENDDAY, mDBHelper.ENDMONTH, mDBHelper.ENDYEAR};
 
