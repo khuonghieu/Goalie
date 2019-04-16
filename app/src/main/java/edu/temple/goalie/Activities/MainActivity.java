@@ -37,11 +37,10 @@ public class MainActivity extends AppCompatActivity {
 
         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(MainActivity.this);
         if (acct != null) {
-            String personName = acct.getDisplayName();
             TextView textView = findViewById(R.id.logInInfo);
-            String personFamilyName = acct.getFamilyName();
-            textView.setText(personName + personFamilyName);
-            textView.setTextSize(24);
+            String personName = acct.getDisplayName();
+            textView.setText(personName);
+            textView.setTextSize(16);
         }
 
         String[] from = {mDBHelper.TITLE, mDBHelper.CATEGORY,
