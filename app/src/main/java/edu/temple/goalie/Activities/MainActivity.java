@@ -12,6 +12,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
+
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 
 import edu.temple.goalie.Adapter.GoalListAdapter;
 import edu.temple.goalie.Database.DBHelper;
@@ -30,6 +34,14 @@ public class MainActivity extends AppCompatActivity {
         list = findViewById(R.id.goalList);
         mDBHelper = new DBHelper(this);
         db = mDBHelper.getWritableDatabase();
+
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(MainActivity.this);
+        if (acct != null) {
+            TextView textView = findViewById(R.id.logInInfo);
+            String personName = acct.getDisplayName();
+            textView.setText(personName);
+            textView.setTextSize(16);
+        }
 
         String[] from = {mDBHelper.TITLE, mDBHelper.CATEGORY,
                 mDBHelper.STARTDAY, mDBHelper.STARTMONTH, mDBHelper.STARTYEAR,
