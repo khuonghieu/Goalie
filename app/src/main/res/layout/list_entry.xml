@@ -4,131 +4,142 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:paddingBottom="8dp">
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:visibility="visible">
 
-        <TextView
-            android:id="@+id/startYear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="right"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="70dp"
-            android:layout_marginRight="70dp"
-            android:text="startYear"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/category"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_column="71"
-            android:layout_weight="0.24"
-            android:text="Category"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:visibility="visible" />
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    android:text="Title"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/QUOTE_TEXT_COLOR"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginRight="0dp"
-            android:text="Title"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/QUOTE_TEXT_COLOR"
-            android:textSize="35sp"
-            android:textStyle="bold"
-            android:visibility="visible" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/description"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="0dp"
-            android:layout_weight="0.73"
-            android:text="Description"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:visibility="visible" />
+                <TextView
+                    android:id="@+id/startMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="startMonth"
+                    android:textColor="@color/QUOTE_TEXT_COLOR"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <TextView
-            android:id="@+id/startDay"
-            android:layout_width="20dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="right"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="110dp"
-            android:layout_marginRight="110dp"
-            android:text="startDay"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textColor="@color/QUOTE_TEXT_COLOR"
+                    android:text="/" />
 
-        <TextView
-            android:id="@+id/startMonth"
-            android:layout_width="20dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="right"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="124dp"
-            android:layout_marginRight="124dp"
-            android:text="startMonth"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+                <TextView
+                    android:id="@+id/startDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="startDay"
+                    android:textColor="@color/QUOTE_TEXT_COLOR"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <TextView
-            android:id="@+id/endYear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="right"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginRight="0dp"
-            android:text="endYear"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textColor="@color/QUOTE_TEXT_COLOR"
+                    android:text="/" />
+                <TextView
+                    android:id="@+id/startYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="startYear"
+                    android:textColor="@color/QUOTE_TEXT_COLOR"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textColor="@color/QUOTE_TEXT_COLOR"
+                    android:text="    -    " />
+                <TextView
+                    android:id="@+id/endMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="endMonth"
+                    android:textColor="@color/QUOTE_TEXT_COLOR"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textColor="@color/QUOTE_TEXT_COLOR"
+                    android:text="/" />
 
-        <TextView
-            android:id="@+id/endDay"
-            android:layout_width="20dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="right"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginRight="25dp"
-            android:text="endDay"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+                <TextView
+                    android:id="@+id/endDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="endDay"
+                    android:textColor="@color/QUOTE_TEXT_COLOR"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textColor="@color/QUOTE_TEXT_COLOR"
+                    android:text="/" />
+                <TextView
+                    android:id="@+id/endYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="endYear"
+                    android:textColor="@color/QUOTE_TEXT_COLOR"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <TextView
-            android:id="@+id/endMonth"
-            android:layout_width="20dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="right"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
-            android:text="endMonth"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="0.73"
+                    android:text="Description"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/category"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.24"
+                    android:text="Category"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:visibility="visible" />
+        </LinearLayout>
 
 </LinearLayout>
+

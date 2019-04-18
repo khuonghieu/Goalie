@@ -33,8 +33,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:orientation="vertical"
             android:background="@color/BACKGROUND_COLOR"
+            android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -63,6 +63,7 @@
 
                 android:text="Category"
                 android:textColor="@android:color/black" />
+
             <TextView
                 android:id="@+id/ViewGoalDescription"
                 android:layout_width="match_parent"
@@ -72,75 +73,73 @@
                 android:textColor="@android:color/black" />
 
             <LinearLayout
-                android:layout_width="390dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="100dp"
+                    android:id="@+id/Start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/pinkRed"
+                    android:textStyle="bold"
+                    android:text="Start Date:" />
+
+                <TextView
+                    android:id="@+id/ViewGoalStartMonth"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" />
+
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Start Month"
+                    android:textColor="@color/QUOTE_TEXT_COLOR" />
 
                 <TextView
                     android:id="@+id/ViewGoalStartDay"
-                    android:layout_width="60dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_horizontal|center_vertical"
-                    android:text="TextView"
-                    android:textColor="@color/QUOTE_TEXT_COLOR" />
-                <TextView
-                    android:id="@+id/ViewGoalStartMonth"
-                    android:layout_width="60dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-
-                    android:gravity="center_horizontal|center_vertical"
-                    android:text="TextView"
+                    android:text="Start Day"
                     android:textColor="@color/QUOTE_TEXT_COLOR" />
 
                 <TextView
                     android:id="@+id/ViewGoalStartYear"
-                    android:layout_width="60dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:gravity="center_horizontal|center_vertical"
-                    android:text="TextView"
+                    android:text="Start Year"
                     android:textColor="@color/QUOTE_TEXT_COLOR" />
-
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/End"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal|center_vertical"
-                    android:text="--"
-                    android:textColor="@android:color/black" />
-
-                <TextView
-                    android:id="@+id/ViewGoalEndDay"
-                    android:layout_width="60dp"
-                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center_horizontal|center_vertical"
-                    android:text="TextView"
-                    android:textColor="@color/QUOTE_TEXT_COLOR" />
-
+                    android:textStyle="bold"
+                    android:textColor="@color/pinkRed"
+                    android:text="                  End Date:" />
                 <TextView
                     android:id="@+id/ViewGoalEndMonth"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:gravity="center_horizontal|center_vertical"
-                    android:text="TextView"
+                    android:text="End Month"
+                    android:textColor="@color/QUOTE_TEXT_COLOR" />
+
+                <TextView
+                    android:id="@+id/ViewGoalEndDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="End Day"
                     android:textColor="@color/QUOTE_TEXT_COLOR" />
 
                 <TextView
                     android:id="@+id/ViewGoalEndYear"
-                    android:layout_width="60dp"
-                    android:layout_height="34dp"
-                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:gravity="center_horizontal|center_vertical"
-                    android:text="TextView"
+                    android:text="End Year"
                     android:textColor="@color/QUOTE_TEXT_COLOR" />
 
             </LinearLayout>
@@ -150,6 +149,7 @@
                 android:layout_height="wrap_content"
                 android:text="Journal"
                 android:textAlignment="center"
+                android:textColor="@color/pinkRed"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
