@@ -21,7 +21,7 @@ import edu.temple.goalie.R;
 public class LogIn extends AppCompatActivity {
     Button logInButton;
     int RC_SIGN_IN = 0;
-    SignInButton signInButton;
+
     GoogleSignInClient mGoogleSignInClient;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +69,9 @@ public class LogIn extends AppCompatActivity {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
             // Signed in successfully, show authenticated UI.
-            startActivity(new Intent(LogIn.this, MainActivity.class));
+            Intent intent = new Intent(LogIn.this, MainActivity.class);
+            intent.putExtra("accountName", account.getDisplayName());
+            startActivity(intent);
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.

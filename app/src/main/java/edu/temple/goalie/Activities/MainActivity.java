@@ -35,13 +35,10 @@ public class MainActivity extends AppCompatActivity {
         mDBHelper = new DBHelper(this);
         db = mDBHelper.getWritableDatabase();
 
-        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(MainActivity.this);
-        if (acct != null) {
-            TextView textView = findViewById(R.id.logInInfo);
-            String personName = acct.getDisplayName();
-            textView.setText(personName);
-            textView.setTextSize(16);
-        }
+        Bundle bundle = getIntent().getExtras();
+        String logInName = bundle.getString("accountName");
+        TextView logInInfo = findViewById(R.id.logInInfo);
+        logInInfo.setText(logInName);
 
         String[] from = {mDBHelper.TITLE, mDBHelper.CATEGORY,
                 mDBHelper.STARTDAY, mDBHelper.STARTMONTH, mDBHelper.STARTYEAR,
