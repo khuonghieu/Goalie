@@ -55,16 +55,17 @@
 
         <TextView
             android:id="@+id/logInInfo"
-            android:layout_width="137dp"
-            android:layout_height="34dp"
+            android:layout_width="234dp"
+            android:layout_height="32dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="244dp"
+            android:layout_marginStart="147dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="14dp"
             android:text="Logged In"
-            android:textColor="@color/QUOTE_TEXT_COLOR" />
+            android:textColor="@color/QUOTE_TEXT_COLOR"
+            android:textSize="12sp" />
 
     </RelativeLayout>
 </LinearLayout>

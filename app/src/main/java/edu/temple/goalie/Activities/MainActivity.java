@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         String logInName = bundle.getString("accountName");
         TextView logInInfo = findViewById(R.id.logInInfo);
-        logInInfo.setText(logInName);
+        logInInfo.setText("Logged In: " + logInName);
 
         String[] from = {mDBHelper.TITLE, mDBHelper.CATEGORY,
                 mDBHelper.STARTDAY, mDBHelper.STARTMONTH, mDBHelper.STARTYEAR,
